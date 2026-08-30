@@ -8,7 +8,7 @@ async function getGithubProjects(username: string): Promise<Project[]> {
   try {
     const res = await fetch(
       `https://api.github.com/users/${username}/repos?sort=updated&per_page=6`,
-      { next: { revalidate: 3600 } },
+      { next: { revalidate: 60 } },
     );
 
     if (!res.ok) return [];
