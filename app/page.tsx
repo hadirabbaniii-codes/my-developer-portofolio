@@ -1,22 +1,30 @@
 import Hero from "@/components/Hero";
 import GithubStats from "@/components/GithubStats";
 import ProjectList from "@/components/ProjectList";
+import Contact from "@/components/Contact";
 import { UserProfile } from "@/types/profile";
 
 const myProfile: UserProfile = {
   name: "Hadi Rabbani",
-  role: "Full Stack Developer Trainee",
+  role: "Junior Web Developer",
   university: "Universitas Komputer Indonesia (UNIKOM)",
   major: "S1 Informatics Engineering",
-  bio: "Mahasiswa Teknik Informatika yang berfokus pada pengembangan aplikasi web modern yang scalable, clean code, dan berkinerja tinggi.",
+  bio: "Mahasiswa Aktif Teknik Informatika dengan fokus utama pada perancangan dan pengembangan aplikasi web modern yang scalable, clean code, dan berkinerja tinggi. Didukung pemahaman konfigurasi jaringan komputer, Konfigurasi Router MikroTik (Bandwidth Management/Queues, Firewall, Hotspot, Static Routing), Cisco Packet Tracer (VLAN, Inter-VLAN Routing, OSPF, NAT), IP Subnetting, dan troubleshooting LAN.",
   skills: [
     "React.js",
-    "Next.js",
+    "Laravel",
     "TypeScript",
     "Tailwind CSS",
-    "Node.js",
+    "PHP",
+    "MySQL",
     "Git",
   ],
+  otherSkills: ["MikroTik", "Cisco"],
+  socials: {
+    email: "h.hadirabbani@gmail.com",
+    linkedin: "https://linkedin.com/in/hadirabbani",
+    instagram: "https://instagram.com/hadirabbaniii",
+  },
   isAvailableForHire: true,
 };
 
@@ -30,6 +38,7 @@ export default async function Home() {
       <Hero profile={myProfile} />
       <GithubStats username={githubUsername} />
       <ProjectList username={githubUsername} />
+      <Contact socials={myProfile.socials} />
     </main>
   );
 }

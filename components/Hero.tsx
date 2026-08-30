@@ -29,7 +29,9 @@ export default function Hero({ profile }: HeroProps) {
         </span>
       </div>
 
-      <p className="mt-4 text-slate-300 leading-relaxed">{profile.bio}</p>
+      <p className="mt-4 text-slate-300 text-justify leading-relaxed">
+        {profile.bio}
+      </p>
 
       <div className="mt-6">
         <h2 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">
@@ -46,6 +48,24 @@ export default function Hero({ profile }: HeroProps) {
           ))}
         </div>
       </div>
+
+      {profile.otherSkills && profile.otherSkills.length > 0 && (
+        <div className="mt-4">
+          <h2 className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-2">
+            Other Skills
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            {profile.otherSkills.map((skill) => (
+              <span
+                key={skill}
+                className="bg-slate-800 text-slate-200 text-xs px-3 py-1 rounded-md border border-slate-700 hover:border-blue-500 transition-colors"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   );
 }

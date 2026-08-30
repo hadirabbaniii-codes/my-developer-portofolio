@@ -1,3 +1,8 @@
+export interface SocialLinks {
+  email: string;
+  linkedin: string;
+  instagram: string;
+}
 export interface UserProfile {
   name: string;
   role: string;
@@ -5,5 +10,7 @@ export interface UserProfile {
   major: string;
   bio: string;
   skills: string[];
+  otherSkills?: string[];
+  socials: SocialLinks;
   isAvailableForHire: boolean;
 }
