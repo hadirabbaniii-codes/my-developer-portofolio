@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hadi Rabbani | Full Stack Developer",
-  description: "Portofolio & Guestbook Hadi Rabbani",
+  title: "Hadi Rabbani | Junior Web Developer",
+  description: "Portofolio Hadi Rabbani",
 };
 
 export const viewport: Viewport = {
